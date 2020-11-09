@@ -23,14 +23,22 @@ namespace CoronovirusProject.Api.Controllers
 
         // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Users>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<UserView>>> GetUsers()
         {
-            return await _context.Users.ToListAsync();
+            var users = await _context.Users.ToListAsync();
+
+            foreach(var user in users)
+            {
+                user.IdDepartmentNavigation = await 
+                    _context.Departments.FirstOrDefaultAsync(x => x.Id == user.IdDepartment);
+            }
+
+            return users.Select(s => (UserView)s).ToList();
         }
 
         // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Users>> GetUsers(int id)
+        public async Task<ActionResult<UserView>> GetUsers(int id)
         {
             var users = await _context.Users.FindAsync(id);
 
@@ -39,7 +47,10 @@ namespace CoronovirusProject.Api.Controllers
                 return NotFound();
             }
 
-            return users;
+            users.IdDepartmentNavigation = await
+                    _context.Departments.FirstOrDefaultAsync(x => x.Id == users.IdDepartment);
+
+            return (UserView)users;
         }
 
         // PUT: api/Users/5
