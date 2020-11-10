@@ -80,7 +80,9 @@ namespace CoronovirusProject.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<Departments>> PostDepartments(Departments departments)
         {
-            _context.Departments.Add(departments);
+            _context.Departments.Add(new Departments { Name = departments.Name, Users = departments.Users});
+
+
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetDepartments", new { id = departments.Id }, departments);

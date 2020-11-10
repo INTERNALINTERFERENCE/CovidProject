@@ -10,7 +10,7 @@ namespace CoronovirusProject.Api.Data.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
+        
         public static implicit operator DepartmentView(Departments departments)
         {
             if (departments == null) { return new DepartmentView(); }
