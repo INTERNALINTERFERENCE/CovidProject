@@ -78,7 +78,7 @@ namespace CoronovirusProject.Api.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Departments>> PostDepartments(Departments departments)
+        public async Task<ActionResult<DepartmentView>> PostDepartments(Departments departments)
         {
             _context.Departments.Add(new Departments { Name = departments.Name, Users = departments.Users});
 
