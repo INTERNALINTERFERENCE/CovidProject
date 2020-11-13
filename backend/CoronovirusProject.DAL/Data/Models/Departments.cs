@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CoronovirusProject.Api.Data.Models
+namespace CoronovirusProject.DAL.Data.Models
 {
     public partial class Departments
     {

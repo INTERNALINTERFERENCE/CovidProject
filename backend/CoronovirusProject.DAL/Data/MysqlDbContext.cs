@@ -1,9 +1,9 @@
 ﻿using System;
-using CoronovirusProject.Api.Data.Models;
+using CoronovirusProject.DAL.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace CoronovirusProject.Api.Data
+namespace CoronovirusProject.DAL.Data
 {
     public partial class MysqlDbContext : DbContext
     {

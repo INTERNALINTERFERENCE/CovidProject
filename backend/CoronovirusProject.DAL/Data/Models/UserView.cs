@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CoronovirusProject.Api.Data.Models
+﻿
+namespace CoronovirusProject.DAL.Data.Models
 {
     public class UserView
     {

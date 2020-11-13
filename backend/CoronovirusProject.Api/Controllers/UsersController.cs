@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using CoronovirusProject.Api.Data;
-using CoronovirusProject.Api.Data.Models;
+using CoronovirusProject.DAL.Data;
+using CoronovirusProject.DAL.Data.Models;
 
 namespace CoronovirusProject.Api.Controllers
 {
