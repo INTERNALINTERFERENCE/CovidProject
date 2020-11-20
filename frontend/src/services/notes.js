@@ -1,16 +1,14 @@
-import {ActionCreators} from '../redux/notesReducer'
+import {ActionCreators} from '../redux/notesReducer';
+import * as axios from 'axios';
+
+const axiosInstance = axios.create({
+    baseUrl: "https://localhost:44336/api/users",
+});
 
 export const GetNotes = async (dispatch) => {
     try{
-        // fake api call
-        const response = [
-            {value: 'study for exam in 1 weeks', id: 1},
-            {value: 'study for exam in 2 weeks', id: 2},
-            {value: 'study for exam in 3 weeks', id: 3},
-            {value: 'study for exam in 4 weeks', id: 4},
-        ];
-
-        dispatch(ActionCreators.setNotes(response));
+        const {data} = await axiosInstance.get();
+        dispatch(ActionCreators.setNotes(data));
     }catch{
         console.log('Error!');
     }

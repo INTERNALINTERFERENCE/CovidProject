@@ -10,10 +10,10 @@ export const ActionTypes = {
 }
 
 export const ActionCreators = { 
-    setNotes : payload => ({type: ActionTypes.SET_NOTES, payload}),
-    deleteNote : payload => ({type: ActionTypes.DELETE_NOTE, payload}),
-    newNote : payload => ({type: ActionTypes.NEW_NOTE, payload}),
-    editNote : payload => ({type: ActionTypes.EDIT_NOTE, payload}),
+    setNotes:    payload => ({type: ActionTypes.SET_NOTES, payload}),
+    deleteNote:  payload => ({type: ActionTypes.DELETE_NOTE, payload}),
+    newNote:     payload => ({type: ActionTypes.NEW_NOTE, payload}),
+    editNote:    payload => ({type: ActionTypes.EDIT_NOTE, payload}),
 }
 
 export default function NotesReducer (state = initialState, action) {

@@ -6,7 +6,7 @@ import {NotesTable} from "./components/NotesTable";
 const App = () => {
   return (
     <div className="App">
-      <h3>My Notes</h3>
+      <h3>Users and Departments ~ UAD</h3>
       <div style={{maxWidth: '70%', margin: 'auto'}}>
         <div style={{textAlign: 'right'}}>
           <NewNoteModal />
