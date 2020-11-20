@@ -2,7 +2,7 @@ import {ActionCreators} from '../redux/notesReducer';
 import * as axios from 'axios';
 
 const axiosInstance = axios.create({
-    baseUrl: "https://localhost:44336/api/users",
+    baseUrl: "https://localhost:5001/api/users",
 });
 
 export const GetNotes = async (dispatch) => {
