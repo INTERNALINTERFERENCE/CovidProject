@@ -23,7 +23,7 @@ namespace CoronovirusProject.Api.Controllers
 
         // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<UserView>>> GetUsers()
+        public async Task<IEnumerable<UserView>> GetUsers()
         {
             var users = await _context.Users.ToListAsync();
 

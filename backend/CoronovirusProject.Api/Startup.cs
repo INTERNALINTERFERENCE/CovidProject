@@ -35,6 +35,13 @@ namespace CoronovirusProject.Api
 
             app.UseRouting();
 
+            app.UseCors(p =>
+            {
+                p.AllowAnyOrigin();
+                p.AllowAnyHeader();
+                p.AllowAnyMethod();
+            });
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
